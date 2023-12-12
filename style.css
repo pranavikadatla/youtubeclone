@@ -1,0 +1,12 @@
+body{
+    background-color:white;
+}
+#videoPage{
+  display:flex;
+}
+#video-list-container{
+flex:0.8;    
+}
+#icon{
+  flex:0.25;
+}

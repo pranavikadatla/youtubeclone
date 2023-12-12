@@ -1,6 +1,6 @@
 //const URL= "https://www.googleapis.com/yputube/v3";
 // API Key for YouTube Data API
-const apiKey = "AIzaSyATakLlBrycXmEzdd86Pm2ZAzvdGbqPaRE";
+const apiKey = "AIzaSyBhGKjnsdkUTDxuRkI_yqsg8za1HjneVwE";
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchDefaultVideos();
@@ -27,9 +27,9 @@ async function searchVideos() {
 
 // Function to render video items
 function renderVideoList(videos) {
+    console.log("hello");
     const videoListContainer = document.getElementById('video-list-container');
     videoListContainer.innerHTML = '';
-
     videos.forEach(video => {
         const videoItem = document.createElement('div');
         videoItem.classList.add('video-item');
@@ -44,7 +44,9 @@ function renderVideoList(videos) {
 
 // Function to navigate to video details page
 function navigateToVideoDetails(videoId) {
+    console.log("hello");
     localStorage.setItem('selectedVideoId', videoId);
-    window.location.href='';
+    window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+
 }
 
