@@ -24,24 +24,6 @@ async function loadVideoDetails(videoId) {
     document.getElementById('channel-name').innerText = `Channel: ${videoDetails.snippet.channelTitle}`;
 }
 
-// Function to load video comments
-// async function loadVideoComments(videoId) {
-//     const response = await fetch(`https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=${videoId}&key=${apiKey}`);
-//     const data = await response.json();
-//     const commentsContainer = document.getElementById('comments-container');
-
-//     data.items.forEach(comment => {
-//         const commentItem = document.createElement('div');
-//         commentItem.classList.add('comment-item');
-//         commentItem.innerHTML = `
-//             <p>${comment.snippet.topLevelComment.snippet.authorDisplayName}: ${comment.snippet.topLevelComment.snippet.textOriginal}</p>
-//             <button onclick="loadReplyComments('${comment.id}')">Show Replies</button>
-//             <div class="reply-container" id="reply-container-${comment.id}"></div>
-//         `;
-//         commentsContainer.appendChild(commentItem);
-//     });
-// }
-async function loadVideoComments(videoId) {
     try {
         const response = await fetch(`https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=${videoId}&key=${apiKey}`);
         const data = await response.json();
@@ -67,7 +49,7 @@ async function loadVideoComments(videoId) {
     } catch (error) {
         console.error('Error loading comments:', error);
     }
-}
+
 
 
 // Function to load reply comments

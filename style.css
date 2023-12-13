@@ -1,12 +1,41 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
 body{
-    background-color:white;
+    background-color:black;
+    color: white;
 }
 #videoPage{
   display:flex;
 }
 #video-list-container{
-flex:0.8;    
+  display: flex;
+     flex-wrap: wrap;
+     flex:0.8;     
 }
-#icon{
-  flex:0.25;
+#icons{
+  flex:0.15;
+}
+#navbar{
+
+  height:50px;
+ display:flex;
+ background-color: rgb(33,33,33);
+ justify-content: space-between;
+}
+#search-input{
+padding:10px;
+height:20px;
+padding-right: 150px;
+margin:4px;
+border:none;
+border-radius: 10px;
+background-color: black;
+}
+#image{
+   height: 40px;
+   width:90px;
+   border-radius: 10px;
+   margin:3px;
 }

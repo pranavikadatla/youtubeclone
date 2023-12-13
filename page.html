@@ -8,12 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-   <i class="fa-solid fa-sliders"></i>
-
+    <nav id="navbar">
+      <div>
+   <i id="sliders" class="fa-solid fa-sliders"></i>
+   <img id="image" src="./youtubelogo.jpg"/>
+  </div>
     <div class="search-bar">
-        <input type="text" id="search-input" placeholder="Search">
-        <button onclick="searchVideos()">Search</button>
-    </div>
+       <span> <input type="text" id="search-input" placeholder="Search"></span>
+        <span onclick="searchVideos()"><i id="search" class="fa-solid fa-magnifying-glass" style="color: gray"></i>
+        </span>
+     <i class="fa-solid fa-microphone"></i>
+     </div>
+     <div>
+
+     </div>
+    </nav>
     <div id="videoPage">
      <div id="icons" >
    <p>Home</p>
