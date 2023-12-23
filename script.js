@@ -1,6 +1,5 @@
-//const URL= "https://www.googleapis.com/yputube/v3";
-// API Key for YouTube Data API
-const apiKey = "AIzaSyBhGKjnsdkUTDxuRkI_yqsg8za1HjneVwE";
+
+const apiKey = "AIzaSyDqCN3aoSwqQzaQ5Fu2By_2O_LGaMjO9Wc";
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchDefaultVideos();
@@ -47,6 +46,12 @@ function navigateToVideoDetails(videoId) {
     console.log("hello");
     localStorage.setItem('selectedVideoId', videoId);
     window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+    
 
 }
+function changeBackground(){
+  body.style.backgroundcolor ="white";
+
+}
+
 

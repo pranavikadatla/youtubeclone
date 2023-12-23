@@ -43,3 +43,11 @@ background-color: black;
 #sliders{
   margin-top: 2px ;
 }
+.white{
+  background-color: white;
+  color:black;
+}
+.black{
+  background-color: black;
+  color:white;
+}
