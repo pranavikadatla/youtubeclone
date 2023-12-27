@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 async function fetchDefaultVideos() {
     try {
-        const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&type=video&key=${apiKey}`);
+        const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=27&type=video&key=${apiKey}`);
         const data = await response.json();
         renderVideoList(data.items);
     } catch (error) {
@@ -14,9 +14,6 @@ async function fetchDefaultVideos() {
     }
 }
 
-
-
-// Function to fetch videos based on search query
 async function searchVideos() {
     const searchInput = document.getElementById('search-input').value;
     const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${searchInput}&maxResults=20&type=video&key=${apiKey}`);
@@ -24,7 +21,6 @@ async function searchVideos() {
     renderVideoList(data.items);
 }
 
-// Function to render video items
 function renderVideoList(videos) {
     console.log("hello");
     const videoListContainer = document.getElementById('video-list-container');
@@ -34,14 +30,12 @@ function renderVideoList(videos) {
         videoItem.classList.add('video-item');
         videoItem.innerHTML = `
             <img src="${video.snippet.thumbnails.medium.url}" alt="${video.snippet.title}">
-            <p>${video.snippet.title}</p>
+            <p> ${video.snippet.title}</p>
         `;
         videoItem.addEventListener('click', () => navigateToVideoDetails(video.id.videoId));
         videoListContainer.appendChild(videoItem);
     });
 }
-
-// Function to navigate to video details page
 function navigateToVideoDetails(videoId) {
     console.log("hello");
     localStorage.setItem('selectedVideoId', videoId);
@@ -49,9 +43,6 @@ function navigateToVideoDetails(videoId) {
     
 
 }
-function changeBackground(){
-  body.style.backgroundcolor ="white";
 
-}
 
 
