@@ -3,8 +3,8 @@
   padding: 0px;
 }
 body{
-    background-color:rgb(33,33,33);
-    color: white;
+  background-color:rgb(33,33,33);
+  color: white;
 }
 #videoPage{
   display:flex;
@@ -23,33 +23,33 @@ body{
   background-color: rgb(33,33,33);
   position: sticky;
   left: 0%;
-  top:20px;
+  top:13%;
   z-index:50;
   height:80%;
 }
 #navbar{
-  height: 20%;
+ height: 10%;
+ width:100%;
  display:flex;
  background-color: rgb(33,33,33);
  justify-content: space-between;
  align-items: center;
  position:sticky;
+ position: fixed;
  top:0%;
  z-index: 100;
 }
 #search-input{
   position:relative;
-padding:4%;
-border:none;
-background-color: black;
-color: white;
+  padding:4%;
+  border:none;
+  background-color: black;
+  color: white;
 }
 #search{
   background-color:black;
-  padding:4%; 
-  
+  padding:4%;  
 }
-  
 #logo{
   display: flex;
   align-items: center;
@@ -61,14 +61,13 @@ color: white;
   background:black ;
   margin:1%;
   padding:5%;
-  border-radius:50%;
-  
+  border-radius:50%; 
 }
 .button{
   font-size: 18px;
   padding:1%;
-  margin: 0% 1%;
-  border-radius: 40%;
+  margin: 1% 1%;
+  border-radius: 50%;
   border:1px solid grey;
   background:  rgb(33,33,33);
   color:white;
@@ -76,19 +75,19 @@ color: white;
 
 .buttons{
   position: sticky;
-   top:10%;
+  top:10%;
   background-color:rgb(33,33,33);
   z-index:96;
   display: flex;
 }
 .video-item{
-position:relative;
-height:210px;
-width: 320px;
-margin:2%;
-  /* padding:10px; */
-  align-items: center;
-  justify-content:space-between;
+ position:relative;
+ height:210px;
+ width: 320px;
+ margin:2%;
+ margin-top:7%;
+ align-items: center;
+ justify-content:space-between;
 }
 .profile{
   display:flex;
@@ -111,4 +110,8 @@ margin:2%;
 }
 .text{
   margin:5%;
+}
+.home{
+  border:1px rgb(48,48,48);
+  background-color:rgba(48,48,48) ;
 }
